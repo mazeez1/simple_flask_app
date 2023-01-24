@@ -1,0 +1,48 @@
+
+<b4-master></b4-master>
+
+{% block content %}
+
+<meta http-equiv="refesh" content="2">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<header>
+    <header>
+
+        <div class="jumbotron text-center">
+            <h1>Displaying Python List with Flask</h1>
+        </div>
+    </header>
+    <div class="container" class="panel panel-default">
+
+        <table class="table table=condensed">
+            <thead style="background-color:rgb(82, 152, 166)">
+                <tr>
+                    <th>Product name</th>
+                    <th>prices </th>
+                    <th>stock</th>
+                    <th>buy now</th>
+                </tr>
+            </thead>
+        <tbody>
+            {% for product in products %}
+        <tr>
+            <td> {{ product['product_name']}}</td>
+            <td> {{ product['price']}}</td>
+            <td>{{ product['stock']}}</td>
+            <td><a href="{{ product['buy_now']}}">Buy</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+<br><br><br>
+
+
+
+</header>
+
+
+
+{% endblock %}
